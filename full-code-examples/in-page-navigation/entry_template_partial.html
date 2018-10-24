@@ -1,0 +1,11 @@
+{!--
+    Pass the list to the wrapper. This would normally be located in
+    an entry template and would work great as a template partial.
+--}
+{layout:set name="navigation"}
+    <div class="page_links">
+        {exp:stash:get_list name="navigation" process="end"}
+            <a href="#{item_link}">{item_title}</a>
+        {/exp:stash:get_list}
+    </div>
+{/layout:set}

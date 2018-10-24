@@ -1,0 +1,22 @@
+{!--
+    In your entry templates, pass the entry id to the wrapper that you want
+    a user to navigation to when they press the 'edit' button.
+--}
+
+{layout="site/_wrapper"}
+
+{exp:channel:entries
+    channel="page"
+    limit="1"
+    require_entry="yes"
+    disable="categories|category_fields|member_data|pagination"}
+
+    {layout:set name="title"}{title}{/layout:set}
+    {layout:set name="edit_button_id"}{entry_id}{/layout:set}
+
+    {tp_repeatable_content}
+
+    {if no_results}
+		{redirect="404"}
+	{/if}
+{/exp:channel:entries}

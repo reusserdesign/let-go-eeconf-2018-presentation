@@ -1,0 +1,23 @@
+{!--
+    Implement the bloq code, making sure to add the title
+    to a Stash list.
+--}
+{content_slab}
+	{if navigation_title}
+		<a name="{exp:ce_str:ing url_title}{navigation_title}{/exp:ce_str:ing}"></a>
+
+		{exp:stash:append_list name="navigation" parse_tags="yes"}
+			{stash:item_title}{navigation_title}{/stash:item_title}
+            {stash:item_link}
+                {exp:ce_str:ing url_title parse="inward"}{navigation_title}{/exp:ce_str:ing}
+            {/stash:item_link}
+		{/exp:stash:append_list}
+	{/if}
+	<section>
+		<div class="max_content_width">
+			<section class='slab content'>
+				{body}
+			</section>
+		</div>
+	</section>
+{/content_slab}

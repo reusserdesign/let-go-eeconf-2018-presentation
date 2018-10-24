@@ -1,0 +1,16 @@
+/*
+    Style the button as you see fit.
+*/
+
+.edit-entry-button {
+    background-color: #f15a22;
+    color: #fff;
+    border-radius: .375rem .375rem 0 0;
+    position: fixed;
+        top: 0;
+        right: 0;
+    padding: .5rem 1rem;
+    transform: rotate(-90deg);
+    transform-origin: 100% 100%;
+    z-index: 9999;
+}

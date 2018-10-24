@@ -1,0 +1,11 @@
+{!--
+    In your entry templates, pass the entry id to the wrapper that you want
+    a user to navigation to when they press the 'edit' button.
+--}
+
+{if (logged_in_group_id == '1'
+    || logged_in_group_id == '6')
+    && layout:edit_button_id}
+
+    <a href="/admin.php/cp/publish/edit/entry/{layout:edit_button_id}" target="blank" class="edit-entry-button">Edit</a>
+{/if}
